@@ -13,8 +13,8 @@ del time.txt
 :: Make the directory if it doesn't exist
 mkdir "backups\%date% %time%"
 
-:: actually backup the stuff
-xcopy /q /e /i "worlds\world" "backups\%date% %time%\world\"
+:: actually backup the stuff, remember to change the name of the world if you do
+xcopy /q /e /i "worlds\Xenon BE 4.0" "backups\%date% %time%\Xenon BE 4.0\"
 xcopy /q /e /i "log.txt" "backups\%date% %time%\log.txt"
 
 echo.
