@@ -20,9 +20,10 @@ def input_loop():
 def output_loop():
     while True:
         for line in process.stdout:
-            print(line.decode("utf-8"))
+            clean_line = line.decode("utf-8").rstrip("\n")
+            print(clean_line)
             with open("log.txt", "a+") as log_file:
-                log_file.write(line.decode("utf-8"))
+                log_file.write(clean_line)
 
 
 # Backing up loop
