@@ -21,6 +21,8 @@ def output_loop():
     while True:
         for line in process.stdout:
             print(line.decode("utf-8"))
+            with open("log.txt", "a+") as log_file:
+                log_file.write(line.decode("utf-8"))
 
 
 # Backing up loop
